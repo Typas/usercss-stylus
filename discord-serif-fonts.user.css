@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name        Discord Serif Fonts
+@namespace   https://github.com/Typas/usercss-stylus
+@homepageURL https://github.com/Typas/usercss-stylus
+@version     1.0.0
+@license     MIT
+@description Font fallback settings for insane people
+@author      Typas
+@supportURL  https://github.com/Typas/usercss-stylus/issues
+@updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-serif-fonts.user.css
+==/UserStyle== */
+
+@-moz-document domain("discord.com") {
+    :root {
+        --font-primary: "Noto Serif", "Noto Serif CJK TC", serif !important;
+        --font-display: "Noto Serif", "Noto Serif CJK TC", serif !important;
+        --font-code: "Fira Code Retina", "SF Mono", "Inconsolata", "Monaco", "Menlo", "JetBrains Mono", "Cascadia Code", "Cascadia Mono", "PingFang TC", "Noto Sans CJK TC", monospace !important; /* useless */
+        --font-korean: "Noto Serif", "Noto Serif CJK KR", serif !important;
+        --font-japanese: "Noto Serif", "Noto Serif CJK JP", serif !important;
+        --font-chinese-traditional: "Noto Serif", "Noto Serif CJK TC", serif !important;
+        --font-chinese-simplified: "Noto Serif", "Noto Serif CJK SC", serif !important;
+    }
+}

@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name        PTT Term Fonts
+@namespace   https://github.com/Typas/usercss-stylus
+@homepageURL https://github.com/Typas/usercss-stylus
+@version     1.0.0
+@license     MIT
+@description term.ptt.cc的字體設定，讓SymMingLiu只會顯示英文部分。中文能放在SymMingLiu後面而正常顯示。
+@author      Typas
+@supportURL  https://github.com/Typas/usercss-stylus/issues
+@updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/
+==/UserStyle== */
+
+@-moz-document domain("term.ptt.cc") {
+    @font-face {
+        font-family: SymMingLiu;
+        unicode-range: U+00-024F;
+    }
+}

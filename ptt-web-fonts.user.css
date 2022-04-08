@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name        PTT Web Fonts
+@namespace   https://github.com/Typas/usercss-stylus
+@homepageURL https://github.com/Typas/usercss-stylus
+@version     1.0.0
+@license     MIT
+@description 網頁版字體設定
+@author      Typas
+@supportURL  https://github.com/Typas/usercss-stylus/issues
+@updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/ptt-web-fonts.user.css
+==/UserStyle== */
+
+@-moz-document domain("www.ptt.cc") {
+    .bbs-content {
+        font-family: "Inconsolata", "PingFang TC", "Noto Sans CJK TC", monospace;
+    }
+
+    @font-face {
+        font-family: Inconsolata;
+        unicode-range: U+00-024F;
+    }
+}
