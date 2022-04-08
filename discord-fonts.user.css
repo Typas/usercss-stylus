@@ -2,7 +2,7 @@
 @name        Discord Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.0.1
+@version     1.1.0
 @license     MIT
 @description Font fallback settings
 @author      Typas
@@ -12,12 +12,12 @@
 
 @-moz-document domain("discord.com") {
     :root {
-        --font-primary: "Fira Sans", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-        --font-display: "Fira Sans", Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        --font-primary: "SF Pro Text", "Fira Sans", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        --font-display: "SF Pro Display", "Fira Sans", Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
         --font-code: "Fira Code Retina", "SF Mono", "Inconsolata", "Monaco", "Menlo", "JetBrains Mono", "Cascadia Code", "Cascadia Mono", "PingFang TC", "Noto Sans CJK TC", monospace !important; /* useless */
-        --font-korean: "Fira Sans", Whitney, "Noto Sans CJK KR", sans-serif !important;
-        --font-japanese: "Fira Sans", Whitney, "Noto Sans CJK JP", sans-serif !important;
-        --font-chinese-traditional: "Fira Sans", Whitney, "PingFang TC", "Noto Sans CJK TC", sans-serif !important;
-        --font-chinese-simplified: "Fira Sans", Whitney, "PingFang SC", "Noto Sans CJK SC", sans-serif !important;
+        --font-korean: "SF Pro Text", "Fira Sans", Whitney, "Noto Sans CJK KR", sans-serif !important;
+        --font-japanese: "SF Pro Text", "Fira Sans", Whitney, "Noto Sans CJK JP", sans-serif !important;
+        --font-chinese-traditional: "SF Pro Text", "Fira Sans", Whitney, "PingFang TC", "Noto Sans CJK TC", sans-serif !important;
+        --font-chinese-simplified: "SF Pro Text", "Fira Sans", Whitney, "PingFang SC", "Noto Sans CJK SC", sans-serif !important;
     }
 }
