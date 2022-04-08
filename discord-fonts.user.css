@@ -2,12 +2,12 @@
 @name        Discord Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.0.0
+@version     1.0.1
 @license     MIT
 @description Font fallback settings
 @author      Typas
 @supportURL  https://github.com/Typas/usercss-stylus/issues
-@updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-font.user.css
+@updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-fonts.user.css
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
