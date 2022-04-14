@@ -2,7 +2,7 @@
 @name        Discord Serif Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.1.0
+@version     1.2.0
 @license     MIT
 @description Font fallback settings for insane people
 @author      Typas
@@ -14,10 +14,13 @@
     :root {
         --font-primary: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
         --font-display: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-code: "Fira Code Retina", "SF Mono", "Inconsolata", "Monaco", "Menlo", "JetBrains Mono", "Cascadia Code", "Cascadia Mono", "PingFang TC", "Noto Sans CJK TC", monospace !important; /* useless */
         --font-korean: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important;
         --font-japanese: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important;
         --font-chinese-traditional: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
         --font-chinese-simplified: "New York", "Noto Serif", "Noto Serif CJK SC", serif !important;
+    }
+
+    code {
+        font-family: "Go Mono", "Courier Prime", "Anonymous Pro", "Noto Serif CJK TC", monospace !important;
     }
 }
