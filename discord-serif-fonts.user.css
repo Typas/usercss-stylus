@@ -2,7 +2,7 @@
 @name        Discord Serif Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.2.0
+@version     1.3.0
 @license     MIT
 @description Font fallback settings for insane people
 @author      Typas
@@ -11,13 +11,43 @@
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
-    :root {
-        --font-primary: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-display: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-korean: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important;
-        --font-japanese: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important;
-        --font-chinese-traditional: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-chinese-simplified: "New York", "Noto Serif", "Noto Serif CJK SC", serif !important;
+    /* no longer functional */
+    /* :root { */
+    /*     --font-primary: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important; */
+    /*     --font-display: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important; */
+    /*     --font-korean: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important; */
+    /*     --font-japanese: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important; */
+    /*     --font-chinese-traditional: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important; */
+    /*     --font-chinese-simplified: "New York", "Noto Serif", "Noto Serif CJK SC", serif !important; */
+    /* } */
+
+    body,
+    textarea,
+    button,
+    *[class='headerTagWithNickname'],
+    *[class='descriptionText'],
+    *[class='calendarPicker'],
+    *[class='embedCard'],
+    *[class='usernameContainer'],
+    *[class='text-xxs'],
+    *[class='text-xs'],
+    *[class='text-sm'],
+    *[class='text-md'],
+    *[class='text-lg'],
+    *[class='actionTextHeader'],
+    *[class='actionTextDescription'],
+    *[class='actionTextHelper'],
+    *[class='keywordsTextArea'],
+    *[class='rowLabel'],
+    *[class='triggerHeader'],
+    *[class='ruleSubtextDescription'],
+    *[class='ruleTextDescription'],
+    *[class='expandButtonContents']{
+        font-family:
+            "New York",
+            "Noto Serif",
+            "Noto Serif CJK TC",
+            serif !important;
     }
 
     code {
