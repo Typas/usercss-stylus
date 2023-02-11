@@ -2,7 +2,7 @@
 @name        Discord Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.5.0
+@version     1.5.1
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
@@ -12,13 +12,13 @@
 @var text primary-font-family "Primary font" "gg sans"
 @var text display-font-family "Display font" "gg sans"
 @var text headline-font-family "Headline font" "ABC Ginto Nord"
-@var text default-font-fallbacks "font fallbacks" ["Noto Sans", "Helvetica Neue", Helvetica, Arial]
-@var select default-font-fallback-type "font last fallback" [serif, sans-serif]
-@var select cjk-region "CJK language code (zh/jp/kr)" [zh-TW, zh-CN, zh-HK, jp, kr]
+@var text default-font-fallbacks "font fallbacks" ["Noto Sans", "Helvetica Neue", "Helvetica", "Arial"]
+@var select default-font-fallback-type "font last fallback" ["serif", "sans-serif"]
+@var select cjk-region "CJK language code (zh/jp/kr)" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
 @var text cjk-primary-font-family "CJK primary font" "Noto Serif CJK TC"
 @var text cjk-display-font-family "CJK display font" "Noto Serif CJK TC"
 @var text cjk-headline-font-family "CJK headline font" "Noto Serif CJK TC"
-@var text cjk-font-fallbacks "CJK font fallbacks" ["Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun]
+@var text cjk-font-fallbacks "CJK font fallbacks" ["Microsoft JhengHei", "微軟正黑體", "Microsoft JhengHei UI", "Microsoft YaHei", "微軟雅黑", "宋体", "SimSun"]
 @var text code-font-family "Code font" Monaco
 @var text cjk-code-font-family "CJK Code font" Monaco
 @var text code-font-feature-settings "Code font feature settings" normal
