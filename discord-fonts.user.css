@@ -2,24 +2,24 @@
 @name        Discord Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.5.4
+@version     2.0.1
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
 @supportURL  https://github.com/Typas/usercss-stylus/issues
 @updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-fonts.user.css
 @preprocessor default
-@var text primary-font-family "Primary font" "gg sans"
-@var text display-font-family "Display font" "gg sans"
-@var text headline-font-family "Headline font" "ABC Ginto Nord"
-@var text default-font-fallbacks "font fallbacks" ""Noto Sans", "Helvetica Neue", "Helvetica", "Arial""
+@var text primary-font-family "Primary font" ""gg sans""
+@var text display-font-family "Display font" ""gg sans""
+@var text headline-font-family "Headline font" ""ABC Ginto Nord""
+@var text default-font-fallbacks "font fallbacks" ""Noto Sans", "Helvetica Neue", Helvetica, Arial"
 @var select cjk-region "CJK language code" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
-@var text cjk-primary-font-family "CJK primary font" "Noto Serif CJK TC"
-@var text cjk-display-font-family "CJK display font" "Noto Serif CJK TC"
-@var text cjk-headline-font-family "CJK headline font" "Noto Serif CJK TC"
-@var text cjk-font-fallbacks ""CJK font fallbacks" "Microsoft JhengHei", "微軟正黑體", "Microsoft JhengHei UI", "Microsoft YaHei", "微軟雅黑", "宋体", "SimSun""
-@var text code-font-family "Code font" Monaco
-@var text cjk-code-font-family "CJK Code font" Monaco
+@var text cjk-primary-font-family "CJK primary font" ""Noto Sans CJK TC""
+@var text cjk-display-font-family "CJK display font" ""Noto Sans CJK TC""
+@var text cjk-headline-font-family "CJK headline font" ""Noto Sans CJK TC""
+@var text cjk-font-fallbacks "CJK font fallbacks" ""Microsoft JhengHei", "微軟正黑體", "Microsoft JhengHei UI""
+@var text code-font-family "Code font" "Monaco"
+@var text cjk-code-font-family "CJK Code font" ""Noto Sans Mono CJK TC""
 @var text code-font-feature-settings "Code font feature settings" normal
 ==/UserStyle== */
 
@@ -46,10 +46,10 @@
     }
 
     code, pre, tt, kbd:not(.badmono), samp {
-        font-family: var(--code-font-family), var(--cjk-code-font-family),
-                     "Fira Code", "JetBrains Mono", "Cascadia Code", "Victor Mono", "SF Mono", Monaco, Inconsolata, JuliaMono,
-                     Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier
-                     monospace !important;
+        font-family: var(--code-font-family),
+                     "JetBrains Mono", "Cascadia Code", "Victor Mono", "SF Mono", Monaco, Inconsolata, JuliaMono,
+                     Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier,
+                     var(--cjk-code-font-family), monospace !important;
         font-feature-settings: var(--code-font-feature-settings) !important;
     }
 }

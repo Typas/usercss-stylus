@@ -2,41 +2,53 @@
 @name        Discord Serif Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.4.0
+@version     2.0.0
 @license     MIT
-@description Font fallback settings for insane people
+@description Font fallback settings for insane people, CJK users only
 @author      Typas
 @supportURL  https://github.com/Typas/usercss-stylus/issues
 @updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-serif-fonts.user.css
+@preprocessor default
+@var text primary-font-family "Primary font" ""Noto Serif""
+@var text display-font-family "Display font" ""Noto Serif""
+@var text headline-font-family "Headline font" ""Noto Serif""
+@var text default-font-fallbacks "font fallbacks" ""New York", "Noto Serif", "Free Serif", Times, "Times New Roman""
+@var select cjk-region "CJK language code" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
+@var text cjk-primary-font-family "CJK primary font" ""Noto Serif CJK TC""
+@var text cjk-display-font-family "CJK display font" ""Noto Serif CJK TC""
+@var text cjk-headline-font-family "CJK headline font" ""Noto Serif CJK TC""
+@var text cjk-font-fallbacks "CJK font fallbacks" ""LiSong Pro", PMingLiU, 新細明體"
+@var text code-font-family "Code font" ""Anonymous Pro""
+@var text cjk-code-font-family "CJK Code font" ""Noto Serif CJK TC""
+@var text code-font-feature-settings "Code font feature settings" normal
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
     :root {
-        --font-primary: "New York", "Noto Serif", serif !important;
-        --font-display: "New York", "Noto Serif", serif !important;
-        --font-headline: "New York", "Noto Serif", serif !important;
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         serif !important;
     }
 
-    :lang(zh) {
-        --font-primary: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-display: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-        --font-headline: "New York", "Noto Serif", "Noto Serif CJK TC", serif !important;
-    }
-
-    :lang(jp) {
-        --font-primary: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important;
-        --font-display: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important;
-        --font-headline: "New York", "Noto Serif", "Noto Serif CJK JP", serif !important;
-    }
-
-    :lang(kr) {
-        --font-primary: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important;
-        --font-display: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important;
-        --font-headline: "New York", "Noto Serif", "Noto Serif CJK KR", serif !important;
+    :lang(var(--cjk-region)) {
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        var(--cjk-display-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
     }
 
     code {
-        font-family: "Go Mono", "Courier Prime", "Anonymous Pro",
-                     "Noto Serif CJK TC", monospace !important;
+        font-family: var(--code-font-family),
+                     "Go Mono", "Courier Prime", "Anonymous Pro",
+                     var(--cjk-code-font-family), monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 }
