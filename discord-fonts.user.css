@@ -2,7 +2,7 @@
 @name        Discord Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     1.5.1
+@version     1.5.2
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
@@ -13,7 +13,6 @@
 @var text display-font-family "Display font" "gg sans"
 @var text headline-font-family "Headline font" "ABC Ginto Nord"
 @var text default-font-fallbacks "font fallbacks" ["Noto Sans", "Helvetica Neue", "Helvetica", "Arial"]
-@var select default-font-fallback-type "font last fallback" ["serif", "sans-serif"]
 @var select cjk-region "CJK language code (zh/jp/kr)" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
 @var text cjk-primary-font-family "CJK primary font" "Noto Serif CJK TC"
 @var text cjk-display-font-family "CJK display font" "Noto Serif CJK TC"
@@ -27,23 +26,23 @@
 @-moz-document domain("discord.com") {
     :root {
         --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
-                        var(--default-font-fallback-type) !important;
+                        sans-serif !important;
         --font-display: var(--display-font-family), var(--default-font-fallbacks),
-                        var(--default-font-fallback-type) !important;
+                        sans-serif !important;
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
-                         var(--default-font-fallback-type) !important;
+                         sans-serif !important;
     }
 
     :lang(var(--cjk-region)) {
         --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
                         var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
-                        var(--default-font-fallback-type) !important;
+                        sans-serif !important;
         --font-display: var(--display-font-family), var(--default-font-fallbacks),
                         var(--cjk-display-font-family), var(--cjk-font-fallbacks),
-                        var(--default-font-fallback-type) !important;
+                        sans-serif !important;
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
-                        var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
-                         var(--default-font-fallback-type) !important;
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
     }
 
     code, pre, tt, kbd:not(.badmono), samp {
