@@ -2,7 +2,7 @@
 @name        Discord Serif Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.0.0
+@version     2.1.0
 @license     MIT
 @description Font fallback settings for insane people, CJK users only
 @author      Typas
@@ -13,11 +13,10 @@
 @var text display-font-family "Display font" ""Noto Serif""
 @var text headline-font-family "Headline font" ""Noto Serif""
 @var text default-font-fallbacks "font fallbacks" ""New York", "Noto Serif", "Free Serif", Times, "Times New Roman""
-@var select cjk-region "CJK language code" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
 @var text cjk-primary-font-family "CJK primary font" ""Noto Serif CJK TC""
 @var text cjk-display-font-family "CJK display font" ""Noto Serif CJK TC""
 @var text cjk-headline-font-family "CJK headline font" ""Noto Serif CJK TC""
-@var text cjk-font-fallbacks "CJK font fallbacks" ""LiSong Pro", PMingLiU, 新細明體"
+@var text cjk-font-fallbacks "CJK font fallbacks" ""Noto Serif CJK JP", "Noto Serif CJK KR", "LiSong Pro", PMingLiU, SimSun"
 @var text code-font-family "Code font" ""Anonymous Pro""
 @var text cjk-code-font-family "CJK Code font" ""Noto Serif CJK TC""
 @var text code-font-feature-settings "Code font feature settings" normal
@@ -33,7 +32,31 @@
                          serif !important;
     }
 
-    :lang(var(--cjk-region)) {
+    :lang(zh) {
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        var(--cjk-display-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
+    }
+
+    :lang(jp) {
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        var(--cjk-display-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
+    }
+
+    :lang(kr) {
         --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
                         var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
                         sans-serif !important;
