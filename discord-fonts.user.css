@@ -1,26 +1,25 @@
 /* ==UserStyle==
-@name        Discord Fonts
+@name        Discord Fonts CJK
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.0.1
+@version     2.1.0
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
 @supportURL  https://github.com/Typas/usercss-stylus/issues
 @updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-fonts.user.css
 @preprocessor default
-@var text primary-font-family "Primary font" ""gg sans""
-@var text display-font-family "Display font" ""gg sans""
-@var text headline-font-family "Headline font" ""ABC Ginto Nord""
+@var text primary-font-family "Primary font" "gg sans"
+@var text display-font-family "Display font" "gg sans"
+@var text headline-font-family "Headline font" "ABC Ginto Nord"
 @var text default-font-fallbacks "font fallbacks" ""Noto Sans", "Helvetica Neue", Helvetica, Arial"
-@var select cjk-region "CJK language code" ["zh-TW", "zh-CN", "zh-HK", "jp", "kr"]
-@var text cjk-primary-font-family "CJK primary font" ""Noto Sans CJK TC""
-@var text cjk-display-font-family "CJK display font" ""Noto Sans CJK TC""
-@var text cjk-headline-font-family "CJK headline font" ""Noto Sans CJK TC""
-@var text cjk-font-fallbacks "CJK font fallbacks" ""Microsoft JhengHei", "微軟正黑體", "Microsoft JhengHei UI""
-@var text code-font-family "Code font" "Monaco"
-@var text cjk-code-font-family "CJK Code font" ""Noto Sans Mono CJK TC""
-@var text code-font-feature-settings "Code font feature settings" normal
+@var text cjk-primary-font-family "CJK primary font" "Noto Sans CJK TC"
+@var text cjk-display-font-family "CJK display font" "Noto Sans CJK TC"
+@var text cjk-headline-font-family "CJK headline font" "Noto Sans CJK TC"
+@var text cjk-font-fallbacks "CJK font fallbacks" ""Noto Sans CJK JP", "Noto Sans CJK KR", "Microsoft JhengHei", "Microsoft YaHei""
+@var text code-font-family "Code font" "Fira Code"
+@var text cjk-code-font-family "CJK Code font" "Noto Sans Mono CJK TC"
+@var text code-font-feature-settings "Code font feature settings" ""ss01", "ss03", "ss05""
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
@@ -33,7 +32,31 @@
                          sans-serif !important;
     }
 
-    :lang(var(--cjk-region)) {
+    :lang(zh) {
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        var(--cjk-display-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
+    }
+
+    :lang(jp) {
+        --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
+                        var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-display: var(--display-font-family), var(--default-font-fallbacks),
+                        var(--cjk-display-font-family), var(--cjk-font-fallbacks),
+                        sans-serif !important;
+        --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
+                         var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
+                         sans-serif !important;
+    }
+
+    :lang(kr) {
         --font-primary: var(--primary-font-family), var(--default-font-fallbacks),
                         var(--cjk-primary-font-family), var(--cjk-font-fallbacks),
                         sans-serif !important;
