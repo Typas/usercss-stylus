@@ -12,7 +12,7 @@
 @var text primary-font-family "Primary font" ""Noto Serif""
 @var text display-font-family "Display font" ""Noto Serif""
 @var text headline-font-family "Headline font" ""Noto Serif""
-@var text default-font-fallbacks "font fallbacks" ""New York", "Noto Serif", "Free Serif", Times, "Times New Roman""
+@var text default-font-fallbacks "Font fallbacks" ""New York", "Noto Serif", "Free Serif", Times, "Times New Roman""
 @var text cjk-primary-font-family "CJK primary font" ""Noto Serif CJK TC""
 @var text cjk-display-font-family "CJK display font" ""Noto Serif CJK TC""
 @var text cjk-headline-font-family "CJK headline font" ""Noto Serif CJK TC""

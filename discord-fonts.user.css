@@ -2,7 +2,7 @@
 @name        Discord Fonts CJK
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.2.0
+@version     2.2.1
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
@@ -32,6 +32,10 @@
                         sans-serif !important;
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          sans-serif !important;
+        --font-code: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(zh) {
@@ -44,10 +48,6 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
-        --font-code: var(--code-font-family), var(--code-font-fallbacks),
-                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
-                     monospace !important;
-        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(jp) {
@@ -60,10 +60,6 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
-        --font-code: var(--code-font-family), var(--code-font-fallbacks),
-                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
-                     monospace !important;
-        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(kr) {
@@ -76,10 +72,6 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
-        --font-code: var(--code-font-family), var(--code-font-fallbacks),
-                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
-                     monospace !important;
-        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     code, pre, tt, kbd:not(.badmono), samp {
