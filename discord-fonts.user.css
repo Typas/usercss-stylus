@@ -2,7 +2,7 @@
 @name        Discord Fonts CJK
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.2.1
+@version     2.2.2
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
@@ -18,7 +18,7 @@
 @var text cjk-headline-font-family "CJK headline font" "Noto Sans CJK TC"
 @var text cjk-font-fallbacks "CJK font fallbacks" "Meiryo, "Malgun Gothic", "Microsoft JhengHei", "Microsoft YaHei""
 @var text code-font-family "Code font" "Fira Code"
-@var text cjk-code-font-family "CJK code font" "Noto Sans Mono CJK TC“
+@var text cjk-code-font-family "CJK code font" "Noto Sans Mono CJK TC"
 @var text code-font-fallbacks "Code font fallbacks" ""JetBrainsMono", "Cascadia Code", "Victor Mono", Consolas"
 @var text cjk-code-font-fallbacks "CJK code font fallbacks" "Meiryo, "Malgun Gothic", "Microsoft JhenHei", "Microsoft YaHei""
 @var text code-font-feature-settings "Code font feature settings" ""ss01", "ss03", "ss05""
