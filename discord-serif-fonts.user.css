@@ -2,23 +2,25 @@
 @name        Discord Serif Fonts
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.1.1
+@version     2.2.0
 @license     MIT
 @description Font fallback settings for insane people, CJK users only
 @author      Typas
 @supportURL  https://github.com/Typas/usercss-stylus/issues
 @updateURL   https://raw.githubusercontent.com/Typas/usercss-stylus/master/discord-serif-fonts.user.css
 @preprocessor default
-@var text primary-font-family "Primary font" ""Noto Serif""
-@var text display-font-family "Display font" ""Noto Serif""
-@var text headline-font-family "Headline font" ""Noto Serif""
+@var text primary-font-family "Primary font" "Noto Serif"
+@var text display-font-family "Display font" "Noto Serif"
+@var text headline-font-family "Headline font" "Noto Serif"
 @var text default-font-fallbacks "Font fallbacks" ""New York", "Noto Serif", "Free Serif", Times, "Times New Roman""
 @var text cjk-primary-font-family "CJK primary font" ""Noto Serif CJK TC""
 @var text cjk-display-font-family "CJK display font" ""Noto Serif CJK TC""
 @var text cjk-headline-font-family "CJK headline font" ""Noto Serif CJK TC""
-@var text cjk-font-fallbacks "CJK font fallbacks" ""Noto Serif CJK JP", "Noto Serif CJK KR", "LiSong Pro", PMingLiU, SimSun"
+@var text cjk-font-fallbacks "CJK font fallbacks" ""MS Mincho", Batang, PMingLiU, SimSun"
 @var text code-font-family "Code font" ""Anonymous Pro""
-@var text cjk-code-font-family "CJK Code font" ""Noto Serif CJK TC""
+@var text cjk-code-font-family "CJK Code font" "Noto Serif CJK TC"
+@var text code-font-fallbacks "Code font fallbacks" ""JetBrainsMono", "Cascadia Code", "Victor Mono", Consolas"
+@var text cjk-code-font-fallbacks "CJK code font fallbacks" ""MS Mincho", Batang, MingLiU, SimSun"
 @var text code-font-feature-settings "Code font feature settings" normal
 ==/UserStyle== */
 
@@ -30,6 +32,10 @@
                         serif !important;
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          serif !important;
+        --font-code: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(zh) {
@@ -69,9 +75,9 @@
     }
 
     code {
-        font-family: var(--code-font-family),
-                     "Go Mono", "Courier Prime", "Anonymous Pro",
-                     var(--cjk-code-font-family), monospace !important;
+        font-family: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
         font-feature-settings: var(--code-font-feature-settings) !important;
     }
 }
