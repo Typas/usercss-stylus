@@ -2,7 +2,7 @@
 @name        Discord Fonts CJK
 @namespace   https://github.com/Typas/usercss-stylus
 @homepageURL https://github.com/Typas/usercss-stylus
-@version     2.1.0
+@version     2.2.0
 @license     MIT
 @description Discord font settings, CJK users only
 @author      Typas
@@ -12,13 +12,15 @@
 @var text primary-font-family "Primary font" "gg sans"
 @var text display-font-family "Display font" "gg sans"
 @var text headline-font-family "Headline font" "ABC Ginto Nord"
-@var text default-font-fallbacks "font fallbacks" ""Noto Sans", "Helvetica Neue", Helvetica, Arial"
+@var text default-font-fallbacks "Font fallbacks" ""Noto Sans", "Helvetica Neue", Helvetica, Arial"
 @var text cjk-primary-font-family "CJK primary font" "Noto Sans CJK TC"
 @var text cjk-display-font-family "CJK display font" "Noto Sans CJK TC"
 @var text cjk-headline-font-family "CJK headline font" "Noto Sans CJK TC"
-@var text cjk-font-fallbacks "CJK font fallbacks" ""Noto Sans CJK JP", "Noto Sans CJK KR", "Microsoft JhengHei", "Microsoft YaHei""
+@var text cjk-font-fallbacks "CJK font fallbacks" "Meiryo, "Malgun Gothic", "Microsoft JhengHei", "Microsoft YaHei""
 @var text code-font-family "Code font" "Fira Code"
-@var text cjk-code-font-family "CJK Code font" "Noto Sans Mono CJK TC"
+@var text cjk-code-font-family "CJK code font" "Noto Sans Mono CJK TC“
+@var text code-font-fallbacks "Code font fallbacks" ""JetBrainsMono", "Cascadia Code", "Victor Mono", Consolas"
+@var text cjk-code-font-fallbacks "CJK code font fallbacks" "Meiryo, "Malgun Gothic", "Microsoft JhenHei", "Microsoft YaHei""
 @var text code-font-feature-settings "Code font feature settings" ""ss01", "ss03", "ss05""
 ==/UserStyle== */
 
@@ -42,6 +44,10 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
+        --font-code: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(jp) {
@@ -54,6 +60,10 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
+        --font-code: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     :lang(kr) {
@@ -66,13 +76,16 @@
         --font-headline: var(--headline-font-family), var(--default-font-fallbacks),
                          var(--cjk-headline-font-family), var(--cjk-font-fallbacks),
                          sans-serif !important;
+        --font-code: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
+        font-feature-settings: var(--code-font-feature-settings) !important;
     }
 
     code, pre, tt, kbd:not(.badmono), samp {
-        font-family: var(--code-font-family),
-                     "JetBrains Mono", "Cascadia Code", "Victor Mono", "SF Mono", Monaco, Inconsolata, JuliaMono,
-                     Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier,
-                     var(--cjk-code-font-family), monospace !important;
+        font-family: var(--code-font-family), var(--code-font-fallbacks),
+                     var(--cjk-code-font-family), var(--cjk-code-font-fallbacks),
+                     monospace !important;
         font-feature-settings: var(--code-font-feature-settings) !important;
     }
 }
